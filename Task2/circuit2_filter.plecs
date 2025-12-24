@@ -3,7 +3,7 @@ Plecs {
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "10"
+  TimeSpan      "1"
   Timeout       ""
   Solver        "auto"
   MaxStep       "1e-3"
@@ -68,7 +68,7 @@ Plecs {
       LabelPosition east
       Parameter {
         Variable      "V"
-        Value         "1"
+        Value         "48"
         Show          off
       }
     }
@@ -82,7 +82,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "R"
-        Value         "1"
+        Value         "0.1"
         Show          off
       }
     }
@@ -96,7 +96,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "C"
-        Value         "100e-6"
+        Value         "2200e-6"
         Show          off
       }
       Parameter {
@@ -115,7 +115,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "C"
-        Value         "100e-6"
+        Value         "1000e-6"
         Show          off
       }
       Parameter {
@@ -134,7 +134,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "C"
-        Value         "100e-6"
+        Value         "1000e-6"
         Show          off
       }
       Parameter {
@@ -153,7 +153,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Amplitude"
-        Value         "1"
+        Value         "0.9"
         Show          off
       }
       Parameter {
@@ -163,7 +163,7 @@ Plecs {
       }
       Parameter {
         Variable      "Frequency"
-        Value         "1"
+        Value         "50"
         Show          off
       }
       Parameter {
@@ -173,7 +173,7 @@ Plecs {
       }
       Parameter {
         Variable      "Units"
-        Value         "1"
+        Value         "3"
         Show          off
       }
     }
@@ -187,17 +187,17 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Min"
-        Value         "-0.5"
+        Value         "-1"
         Show          off
       }
       Parameter {
         Variable      "Max"
-        Value         "0.5"
+        Value         "1"
         Show          off
       }
       Parameter {
         Variable      "f"
-        Value         "1"
+        Value         "10000"
         Show          off
       }
       Parameter {
@@ -234,7 +234,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -306,7 +306,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "spwm2"
+        Value         "spwm3"
         Show          off
       }
       Parameter {
@@ -330,7 +330,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "spwm1"
+        Value         "spwm4"
         Show          off
       }
       Parameter {
@@ -482,11 +482,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1536, 795]
+      Location      [0, 26; 1536, 807]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABgAAAALpAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAYAAAAAdfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABQAP///wAABgAAAAJ5AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -497,7 +497,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -657,7 +657,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "L"
-        Value         "0.001"
+        Value         "0.003"
         Show          off
       }
       Parameter {
@@ -676,7 +676,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "C"
-        Value         "100e-6"
+        Value         "10e-6"
         Show          off
       }
       Parameter {
@@ -689,10 +689,134 @@ Plecs {
       Type          Voltmeter
       Name          "Vm1"
       Show          on
-      Position      [1250, 435]
+      Position      [1275, 435]
       Direction     up
       Flipped       off
       LabelPosition west
+    }
+    Component {
+      Type          Resistor
+      Name          "R2"
+      Show          on
+      Position      [1215, 435]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "R"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Comparator
+      Name          "Comparator1"
+      Show          on
+      Position      [295, 45]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+    }
+    Component {
+      Type          LogicalOperator
+      Name          "Logical\nOperator1"
+      Show          on
+      Position      [380, 70]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Operator"
+        Value         "6"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto2"
+      Show          off
+      Position      [465, 45]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "spwm3"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto3"
+      Show          off
+      Position      [465, 70]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "spwm4"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          SineGenerator
+      Name          "Sine Wave1"
+      Show          on
+      Position      [150, 40]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Amplitude"
+        Value         "0.9"
+        Show          off
+      }
+      Parameter {
+        Variable      "Bias"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Frequency"
+        Value         "50"
+        Show          off
+      }
+      Parameter {
+        Variable      "Phase"
+        Value         "180"
+        Show          off
+      }
+      Parameter {
+        Variable      "Units"
+        Value         "3"
+        Show          off
+      }
     }
     Connection {
       Type          Wire
@@ -810,8 +934,15 @@ Plecs {
       }
       Branch {
         Points        [240, 220; 240, 175]
-        DstComponent  "Comparator"
-        DstTerminal   2
+        Branch {
+          DstComponent  "Comparator"
+          DstTerminal   2
+        }
+        Branch {
+          Points        [240, 50]
+          DstComponent  "Comparator1"
+          DstTerminal   2
+        }
       }
     }
     Connection {
@@ -886,9 +1017,16 @@ Plecs {
           DstTerminal   2
         }
         Branch {
-          Points        [1250, 510]
-          DstComponent  "Vm1"
-          DstTerminal   2
+          Points        [1215, 510]
+          Branch {
+            Points        [1275, 510]
+            DstComponent  "Vm1"
+            DstTerminal   2
+          }
+          Branch {
+            DstComponent  "R2"
+            DstTerminal   2
+          }
         }
       }
     }
@@ -902,9 +1040,16 @@ Plecs {
         DstTerminal   1
       }
       Branch {
-        Points        [1250, 365]
-        DstComponent  "Vm1"
-        DstTerminal   1
+        Points        [1215, 365]
+        Branch {
+          Points        [1275, 365]
+          DstComponent  "Vm1"
+          DstTerminal   1
+        }
+        Branch {
+          DstComponent  "R2"
+          DstTerminal   1
+        }
       }
     }
     Connection {
@@ -912,6 +1057,35 @@ Plecs {
       SrcComponent  "Vm1"
       SrcTerminal   3
       DstComponent  "Scope1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Logical\nOperator1"
+      SrcTerminal   1
+      DstComponent  "Goto3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Comparator1"
+      SrcTerminal   3
+      Points        [340, 45]
+      Branch {
+        DstComponent  "Goto2"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [340, 70]
+        DstComponent  "Logical\nOperator1"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sine Wave1"
+      SrcTerminal   1
+      DstComponent  "Comparator1"
       DstTerminal   1
     }
   }
